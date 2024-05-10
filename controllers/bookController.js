@@ -28,4 +28,13 @@ const editBook = async (req, res) => {
   }
 };
 
-module.exports = { createBook, editBook };
+const viewBooks = async (req, res) => {
+  const books = await Books.find();
+  try {
+    res.status(200).json(books);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = { createBook, editBook, viewBooks };
