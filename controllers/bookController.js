@@ -37,4 +37,15 @@ const viewBooks = async (req, res) => {
   }
 };
 
-module.exports = { createBook, editBook, viewBooks };
+const deleteBook = async (req, res) => {
+  const id = req.params.id;
+  await Books.findByIdAndDelete(id);
+
+  try {
+    res.status(200).send({ message: "Book deleted" });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = { createBook, editBook, viewBooks, deleteBook };
