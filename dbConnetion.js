@@ -1,3 +1,3 @@
-const dbString = "mongodb+srv://san:1234@cluster0.qdroxu7.mongodb.net/Books";
+const dbString = "mongodb+srv://********@cluster0.qdroxu7.mongodb.net/Books";
 
 module.exports = dbString;
