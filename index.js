@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const router = require("./routes/bookRoute");
+const dbString = require("./dbConnetion");
 const app = express();
 cors();
 
@@ -10,7 +11,7 @@ app.listen(5000, () => {
   console.log("Server Started on port 5000");
 
   mongoose
-    .connect("mongodb+srv://*******@cluster0.qdroxu7.mongodb.net/Books")
+    .connect(dbString)
     .then(console.log("DB connected"))
     .catch((e) => console.log(e));
 });
