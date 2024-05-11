@@ -10,7 +10,7 @@ app.listen(5000, () => {
   console.log("Server Started on port 5000");
 
   mongoose
-    .connect("mongodb+srv://san:1234@cluster0.qdroxu7.mongodb.net/Books")
+    .connect("mongodb+srv://*******cluster0.qdroxu7.mongodb.net/Books")
     .then(console.log("DB connected"))
     .catch((e) => console.log(e));
 });
